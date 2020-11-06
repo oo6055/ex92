@@ -9,11 +9,41 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
 
+/**
+ * The type Main activity..
+ *
+ * @author Ori Ofek <oriofek106@gmail.com>
+ * @version 1.0
+ * @since take the data
+ */
 public class MainActivity extends AppCompatActivity {
+    /**
+     * The S. if it aritmatic or geomatric
+     */
     Switch s;
+    /**
+     * The Etd. take the d
+     */
     EditText etd;
+    /**
+     * The Si. need to move
+     */
     Intent si;
+    /**
+     * The Etx 1. get the first element
+     */
     EditText etx1;
+
+    /**
+     * onCreate
+     * Short description.
+     * do on create
+     * <p>
+     *     Bundle savedInstanceState
+     *
+     * @param	savedInstanceState save the instance state
+     * @return	none
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +55,17 @@ public class MainActivity extends AppCompatActivity {
         etd = (EditText)findViewById(R.id.etd);
     }
 
+    /**
+     * Results
+     *
+     * Short description.
+     * move to other activity
+     * <p>
+     *     View view
+     *
+     * @param	view - see which button pressed
+     * @return	none
+     */
     public void results(View view) {
         if(check())
         {
@@ -37,6 +78,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * check
+     *
+     * Short description.
+     * do on create
+     * <p>
+     *
+     *
+     * @param
+     * @return	true if it is an OK results else false
+     */
     private boolean check() {
         boolean flag = true;
         if(etd.getText().toString().equals("") || etd.getText().toString().equals("-") || etd.getText().toString().equals(".")|| etd.getText().toString().equals("-."))
