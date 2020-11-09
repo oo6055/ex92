@@ -19,9 +19,11 @@ import android.widget.TextView;
 /**
  * The type Results.
  *
- * @author Ori Ofek <oriofek106@gmail.com>
+ * @author Ori Ofek <oriofek106@gmail.com> 9/11/2020
  * @version 1.0
- * @since short  description show the results
+ * @since 1.0
+ * short  description
+ * show the results
  */
 public class results extends AppCompatActivity implements View.OnCreateContextMenuListener ,AdapterView.OnItemClickListener {
     /**

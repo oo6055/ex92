@@ -12,9 +12,11 @@ import android.widget.Toast;
 /**
  * The type Main activity..
  *
- * @author Ori Ofek <oriofek106@gmail.com>
+ * @author Ori Ofek <oriofek106@gmail.com> 9/11/2020
  * @version 1.0
- * @since take the data
+ * @since 1.0
+ * sort description:
+ * take the data
  */
 public class MainActivity extends AppCompatActivity {
     /**
