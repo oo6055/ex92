@@ -218,7 +218,7 @@ public class results extends AppCompatActivity implements View.OnCreateContextMe
 
     /**
      * Finish.
-     * finish the activity
+     * finish the activity and return to the old one
      *
      * <p>
      *     view the view
