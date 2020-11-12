@@ -92,7 +92,7 @@ public class results extends AppCompatActivity implements View.OnCreateContextMe
         {
             for (int i = 1; i <= 20; i++)
             {
-                arr[i-1] = editNumbers(x1 * (float)Math.pow((double)d,(double)(i-1)));
+                arr[i-1] = editNumbers(x1 * (float)Math.pow(d,(i-1)));
                 if(i == 1)
                 {
                     sn[i-1] = Float.parseFloat(arr[i-1]);
