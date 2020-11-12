@@ -207,11 +207,11 @@ public class results extends AppCompatActivity implements View.OnCreateContextMe
     public boolean onContextItemSelected(MenuItem item) {
         String oper = item.getTitle().toString();
         if (oper.equals("Place")) {
-            result.setText("Place: "+(i+1));
+            result.setText("Place: "+editNumbers((i+1)));
         }
         if (oper.equals("take summery")) {
 
-            result.setText("summery: "+sn[i]);
+            result.setText("summery: "+editNumbers(sn[i]));
         }
         return true;
     }
