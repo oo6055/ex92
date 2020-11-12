@@ -21,7 +21,7 @@ import android.widget.TextView;
  *
  * @author Ori Ofek <oriofek106@gmail.com> 9/11/2020
  * @version 1.0
- * @since 1.0
+ * @since 9/11/2020
  * short  description
  * show the results
  */
