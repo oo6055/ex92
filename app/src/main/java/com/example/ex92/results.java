@@ -25,7 +25,7 @@ import android.widget.TextView;
  * short  description
  * show the results
  */
-public class results extends AppCompatActivity implements View.OnCreateContextMenuListener ,AdapterView.OnItemClickListener {
+public class results extends AppCompatActivity implements View.OnCreateContextMenuListener {
     /**
      * show The Result.
      */
@@ -92,6 +92,7 @@ public class results extends AppCompatActivity implements View.OnCreateContextMe
         {
             for (int i = 1; i <= 20; i++)
             {
+                float j = (float)Math.pow(d,(i-1));
                 arr[i-1] = editNumbers(x1 * (float)Math.pow(d,(i-1)));
                 if(i == 1)
                 {
@@ -124,7 +125,7 @@ public class results extends AppCompatActivity implements View.OnCreateContextMe
                 ,R.layout.support_simple_spinner_dropdown_item,arr);
         ls.setAdapter(adp);
 
-        ls.setOnItemClickListener(this);
+        ls.setOnCreateContextMenuListener(this);
     }
 
     /**
@@ -142,7 +143,7 @@ public class results extends AppCompatActivity implements View.OnCreateContextMe
         String newNum = "";
         newNum = String.valueOf(number);
 
-        while (!newNum.equals("") && Float.valueOf(newNum.substring(1)) == number)
+        while (number != 0 && !newNum.equals("") && Float.valueOf(newNum.substring(1)) == number)
         {
             newNum = newNum.substring(1);
         }
@@ -154,24 +155,6 @@ public class results extends AppCompatActivity implements View.OnCreateContextMe
         return newNum;
     }
 
-    /**
-     * onItemClick
-     * Short description.
-     * onItemClick listener use for the list view
-     * <p>
-     *     AdapterView<?> adapterView
-     *     View view
-     *     int pos
-     *     long id
-     *
-     * @param adapterView - the object,view - the item that selected ,pos - the position in the list view,id - the id of the element
-     * @return	none
-     */
-    @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
-        i = pos;
-        view.setOnCreateContextMenuListener(this);
-    }
 
     /**
      * onCreateContextMenu
@@ -206,6 +189,9 @@ public class results extends AppCompatActivity implements View.OnCreateContextMe
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         String op = item.getTitle().toString();
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        i = info.position;
+
         if (op.equals("Place")) {
             result.setText("Place: "+editNumbers((i+1)));
         }

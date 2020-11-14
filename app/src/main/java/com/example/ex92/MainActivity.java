@@ -73,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
         {
             si = new Intent(this,results.class);
             si.putExtra("type",s.isChecked());
-            si.putExtra("x1",etd.getText().toString());
-            si.putExtra("n",etx1.getText().toString());
+            si.putExtra("x1",etx1.getText().toString());
+            si.putExtra("n",etd.getText().toString());
             startActivity(si);
         }
 
