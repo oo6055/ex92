@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
      * <p>
      *
      *
-     * @param
+     * @param none
      * @return	true if it is an OK results else false
      */
     private boolean check() {
